@@ -12,8 +12,8 @@ body {
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -24,12 +24,16 @@ header {
 .score-card {
     background: #fff;
     color: #333;
-    width: 80%;
-    max-width: 600px;
+    width: 600px;
     border-radius: 12px;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.score-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .date {
@@ -77,9 +81,4 @@ header {
 
 .refresh-btn:hover {
     background-color: #0056b3;
-}
-
-.score-card h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
 }
