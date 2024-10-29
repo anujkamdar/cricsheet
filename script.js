@@ -1,8 +1,7 @@
 const seriesURL = "https://api.cricapi.com/v1/series?apikey=1dbee094-f2c8-4910-9908-786cf17cb523&offset=0"; 
 const tempBtn = document.querySelector(".temp");
 let seriesConatiner = document.querySelector(".series-container")
-seriesConatiner.innerHTML = ""
-
+// seriesConatiner.innerHTML = ""
 
 tempBtn.addEventListener("click", async ()=>{
     let responce = await fetch(seriesURL);
@@ -31,8 +30,11 @@ tempBtn.addEventListener("click", async ()=>{
             </div>
             <p class="no-of-matches">Number of matches: <span>${curerntSeries["matches"]}</span></p>
             <button class="refresh-btn">Get more info</button>`
-            seriesConatiner.append(scoreCard);
+            seriesConatiner.prepend(scoreCard);
+
+            scoreCard.querySelector("button").addEventListener("click",() => {
+                // console.log(`${scoreCard.id}`);
+                seriesConatiner.classList.remove("center");
+            })
     }
 })
-
-let b

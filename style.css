@@ -12,14 +12,21 @@ body {
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 header {
     text-align: center;
     margin-top: 20px;
 }
+
+.series-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
  
 .score-card {
     background: #fff;
