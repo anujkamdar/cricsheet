@@ -1,0 +1,128 @@
+
+/* Took color suggestion from AI */
+:root {
+    --primary-color: #1e40af;       
+    --secondary-color: #059669;     
+    --accent-color: #dc2626;        
+    --background-light: #f0f9ff;    
+    --text-primary: #1e293b;        
+    --text-secondary: #475569;    
+    --border-color: #e2e8f0;        
+    --card-hover: #f1f5f9;          
+}
+
+
+.detailed-info {
+    background: var(--background-light);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-primary);
+}
+
+.series-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.detailed-info .series-dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;   
+}
+
+.date-card{
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: 200ms;
+}
+
+.date-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.date-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.date-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(5, 72, 72)
+}
+
+.series-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+
+
+.stat-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: 200ms;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.match-formats {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.match-format {
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.format-count {
+    margin-left: 8px;
+    background: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.match-format:hover {
+    background-color: var(--card-hover)
+}
+

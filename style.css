@@ -21,6 +21,17 @@ header {
     margin-top: 20px;
 }
 
+.grid {
+    display: flex;
+    column-gap: 50px;
+}
+
+.detailed-info {
+    margin-top: 20px;
+    width: 800px;
+    background-color: rgb(240, 240, 240);
+}
+
 .series-container {
     display: flex;
     flex-direction: column;
@@ -89,3 +100,5 @@ header {
 .refresh-btn:hover {
     background-color: #0056b3;
 }
+
+
