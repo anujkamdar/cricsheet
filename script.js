@@ -2,6 +2,8 @@ const seriesURL = "https://api.cricapi.com/v1/series?apikey=1dbee094-f2c8-4910-9
 const tempBtn = document.querySelector(".temp");
 let seriesConatiner = document.querySelector(".series-container")
 // seriesConatiner.innerHTML = ""
+const detailedInfo = document.createElement("div");
+detailedInfo.classList.add("detailed-info");
 
 tempBtn.addEventListener("click", async ()=>{
     let responce = await fetch(seriesURL);
@@ -47,8 +49,6 @@ tempBtn.addEventListener("click", async ()=>{
                         completedMatchesNo++;
                     }
                 }
-
-                const detailedInfo = document.querySelector(".detailed-info")
                 detailedInfo.innerHTML = ` <h2 class="series-name">${seriesDataInfo["name"]}</h2>
                 <div class="series-dates">
                     <div class="date-card">
@@ -85,6 +85,8 @@ tempBtn.addEventListener("click", async ()=>{
                         <p>Test <span class="format-count">${seriesDataInfo["test"]}</span></p>
                     </div>
                 </div>`;
+                document.querySelector(".grid").classList.remove("center")
+                document.querySelector(".grid").append(detailedInfo);
                 let matches = document.createElement("div")
                 matches.classList.add("matches");
                 for(let match of seriesDataMatchList){
