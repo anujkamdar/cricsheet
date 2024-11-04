@@ -102,6 +102,7 @@
     grid-template-columns: 100px 100px 100px;
     column-gap: 20px;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .match-format {
@@ -124,5 +125,65 @@
 
 .match-format:hover {
     background-color: var(--card-hover)
+}
+
+.matches{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+}
+
+.match-details{
+    background-color: white;
+    border-radius: 40px;
+}
+
+.match-header{
+    /* saw this on the internet */
+    padding: 20px;
+    background-image: linear-gradient(to right, #0369a1, #10b981);
+    margin-bottom: 30px;
+    border-top-right-radius:30px;
+    border-top-left-radius: 30px;
+}
+
+.match-name {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.match-info{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+
+.info-box {
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.info-box:hover {
+    background-color: var(--card-hover);
+    transform: translateY(-2px);
+}
+
+.info-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.info-value {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
 }
 

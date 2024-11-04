@@ -85,8 +85,34 @@ tempBtn.addEventListener("click", async ()=>{
                         <p>Test <span class="format-count">${seriesDataInfo["test"]}</span></p>
                     </div>
                 </div>`;
-            
-                seriesConatiner.classList.remove("center");
+                let matches = document.createElement("div")
+                matches.classList.add("matches");
+                for(let match of seriesDataMatchList){
+                    let matchDetails = document.createElement("div");
+                    matchDetails.classList.add("match-details")
+                    console.log(match);
+                    matchDetails.innerHTML = `                    
+                    <div class="match-header">
+                        <div class="match-name">${match["name"]}</div>
+                    </div>
+                    <div class="match-info">
+                        <div class="info-box">
+                            <div class="info-label">Venue</div>
+                            <div class="info-value">${match["venue"]}</div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-label">Date</div>
+                            <div class="info-value">${match["date"]}</div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-label">Time</div>
+                            <div class="info-value">${match["dateTimeGMT"]}</div>
+                        </div>
+                    </div>`
+                    // console.log(matchDetails);
+                    matches.append(matchDetails);
+                }
+                detailedInfo.append(matches);
             })
     }
 })
